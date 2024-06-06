@@ -1,0 +1,5 @@
+[editor.soft-wrap]
+enable = true
+
+[editor]
+true-color = true
