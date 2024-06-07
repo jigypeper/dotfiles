@@ -312,7 +312,7 @@ default_layout "stack_sidebar"
 // Default: $EDITOR or $VISUAL
 //
 // scrollback_editor "nu -c hx"
-scrollback_editor "/usr/bin/hx"
+// scrollback_editor "/usr/bin/hx"
 // scrollback_editor "hx"
 
 // When attaching to an existing session with other users,
