@@ -339,11 +339,6 @@ default_layout "yazelix"
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
 //
-<<<<<<< Updated upstream
-// scrollback_editor "nu -c hx"
-// scrollback_editor "/usr/bin/hx"
-=======
->>>>>>> Stashed changes
 // scrollback_editor "hx"
 
 // When attaching to an existing session with other users,
