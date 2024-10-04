@@ -339,7 +339,7 @@ default_layout "yazelix"
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
 //
-// scrollback_editor "hx"
+scrollback_editor "hx"
 
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
@@ -349,8 +349,8 @@ default_layout "yazelix"
 // mirror_session true
 
 // The folder in which Zellij will look for layouts
-//
-// layout_dir "/home/lucca/.config/yazelix/zellij/layouts"
+// here you can set the absolute path to layout dir
+// layout_dir "/home/my_username/.config/yazelix/zellij/layouts"
 
 // The folder in which Zellij will look for themes
 //
@@ -367,3 +367,9 @@ default_layout "yazelix"
 // Default: false
 //
 // disable_session_metadata true
+
+ui {
+    pane_frames {
+        rounded_corners true
+    }
+}
