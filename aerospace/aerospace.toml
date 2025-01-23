@@ -13,7 +13,7 @@ after-login-command = []
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 
-after-startup-command = ['exec-and-forget sketchybar']
+after-startup-command = ['exec-and-forget sketchybar', 'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0']
 
 # Notify Sketchybar about workspace change
 exec-on-workspace-change = ['/bin/bash', '-c',
@@ -62,7 +62,7 @@ inner.horizontal = 0
 inner.vertical =   0
 outer.left =       0
 outer.bottom =     0
-outer.top =        0
+outer.top =        [{ monitor."built-in" = 8 }, 41]
 outer.right =      0
 
 # 'main' binding mode declaration
@@ -120,12 +120,9 @@ alt-7 = 'workspace Home7'
 alt-8 = 'workspace Home8'
 alt-9 = 'workspace Home9'
 alt-b = 'workspace Web'
-alt-i = 'workspace IDEA'
-alt-m = 'workspace Music'
 alt-o = 'workspace Obsidian'
 alt-s = 'workspace Slack'
 alt-t = 'workspace Terminal'
-alt-z = 'workspace Zoom'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace Home'
@@ -138,12 +135,9 @@ alt-shift-7 = 'move-node-to-workspace Home7'
 alt-shift-8 = 'move-node-to-workspace Home8'
 alt-shift-9 = 'move-node-to-workspace Home9'
 alt-shift-b = 'move-node-to-workspace Web'
-alt-shift-i = 'move-node-to-workspace IDEA'
-alt-shift-m = 'move-node-to-workspace Music'
 alt-shift-o = 'move-node-to-workspace Obsidian'
 alt-shift-s = 'move-node-to-workspace Slack'
 alt-shift-t = 'move-node-to-workspace Terminal'
-alt-shift-z = 'move-node-to-workspace Zoom'
 
 
 ctrl-alt-1 = 'summon-workspace Home'
@@ -156,12 +150,9 @@ ctrl-alt-7 = 'summon-workspace Home7'
 ctrl-alt-8 = 'summon-workspace Home8'
 ctrl-alt-9 = 'summon-workspace Home9'
 ctrl-alt-b = 'summon-workspace Web'
-ctrl-alt-i = 'summon-workspace IDEA'
-ctrl-alt-m = 'summon-workspace Music'
 ctrl-alt-o = 'summon-workspace Obsidian'
 ctrl-alt-s = 'summon-workspace Slack'
 ctrl-alt-t = 'summon-workspace Terminal'
-ctrl-alt-z = 'summon-workspace Zoom'
 
 
 alt-shift-f = 'fullscreen'
@@ -190,32 +181,19 @@ alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
 
-[[on-window-detected]]
-if.app-id = 'company.thebrowser.Browser'
-run = "move-node-to-workspace Web"
+# [[on-window-detected]]
+# if.app-id = 'com.brave.Browser'
+# run = "move-node-to-workspace Web"
 
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
 run = "move-node-to-workspace Terminal"
 
 [[on-window-detected]]
-if.app-id = 'com.spotify.client'
-run = "move-node-to-workspace Music"
-
-[[on-window-detected]]
 if.app-id = 'md.obsidian'
 run = "move-node-to-workspace Obsidian"
 
 [[on-window-detected]]
-if.app-id = 'com.jetbrains.intellij'
-run = "move-node-to-workspace IDEA"
-
-[[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
 run = "move-node-to-workspace Slack"
-
-[[on-window-detected]]
-if.app-id = 'us.zoom.xos'
-run = "move-node-to-workspace Zoom"
-
 
