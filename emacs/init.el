@@ -1,8 +1,7 @@
 ;;; init.el --- Minimal vanilla Emacs config -*- lexical-binding: t; -*-
 
 ;;; Basic settings
-(setq inhibit-startup-screen t
-      initial-scratch-message nil
+(setq initial-scratch-message nil
       ring-bell-function 'ignore
       make-backup-files nil
       auto-save-default nil)
@@ -89,6 +88,20 @@
 ;;; C/C++ settings
 (setq c-default-style "linux"
       c-basic-offset 4)
+
+;;; Company mode - autocomplete
+(require 'company)
+(add-hook 'after-init-hook 'global-company-mode)
+(setq company-idle-delay 0.1
+      company-minimum-prefix-length 2)
+
+;;; Eglot - LSP client
+(require 'eglot)
+(setq eglot-autoshutdown t)  ; Shutdown server when last buffer closes
+
+;; Enable Eglot for C/C++
+(add-hook 'c-mode-hook 'eglot-ensure)
+(add-hook 'c++-mode-hook 'eglot-ensure)
 
 ;;; Python settings
 (add-hook 'python-mode-hook
